@@ -1,5 +1,3 @@
-import java.awt.print.Book;
-
 class BookedPlatform implements Comparable<BookedPlatform>{
     String platformId;
     String trainId;

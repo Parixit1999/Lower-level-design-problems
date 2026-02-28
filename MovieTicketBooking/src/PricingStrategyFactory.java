@@ -1,5 +1,3 @@
-import java.util.*;
-
 class PricingStrategyFactory {
     public PricingStrategy createPricingStrategy(SeatType seatType){
         System.out.println(seatType);

@@ -1,6 +1,3 @@
-import javax.swing.text.html.Option;
-import java.util.*;
-
 class Connect4DotsBoard {
     private int row;
     private int col;

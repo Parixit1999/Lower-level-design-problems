@@ -1,5 +1,4 @@
-import com.sun.source.tree.Tree;
-import lombok.Getter;
+import java.util.*;
 
 public class Main {
 public static void main(String[] args) {
@@ -12,7 +11,6 @@ public static void main(String[] args) {
 
   TrainManagementSystem trainManagementSystem = new TrainManagementSystem(Arrays.asList(p1, p2), trainSchedulingStrategy);
 
-
   Train train1 = new Train("t1", 0, 60);
   Train train2 = new Train("t2", 60, 100);
   Train train3 = new Train("t3", 45, 90);
@@ -21,7 +19,6 @@ public static void main(String[] args) {
   Train train6 = new Train("t6", 0, 200);
   Train train7 = new Train("t7", 80, 100);
   Train train8 = new Train("t8", 200, 260);
-
 
   trainManagementSystem.addTrain(train1);
   trainManagementSystem.addTrain(train2);
@@ -33,7 +30,7 @@ public static void main(String[] args) {
   trainManagementSystem.addTrain(train7);
   trainManagementSystem.addTrain(train8);
 
-  System.out.println(trainManagementSystem.getTrain(p1, 100).get().id);
+  System.out.println(trainManagementSystem.getTrain(p1, 100).get().getId());
 
   System.out.println(trainManagementSystem.getPlatform(train4, 10).isPresent());
 

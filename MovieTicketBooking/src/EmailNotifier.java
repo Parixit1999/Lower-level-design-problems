@@ -1,5 +1,3 @@
-import java.util.*;
-
 class EmailNotifier implements Notifier{
     @Override
     public void sendMessage(Ticket ticket) {

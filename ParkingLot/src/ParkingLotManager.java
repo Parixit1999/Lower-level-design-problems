@@ -1,6 +1,4 @@
-
 import java.util.*;
-import java.util.concurrent.*;
 
 class ParkingLotManager{
 
@@ -13,7 +11,6 @@ class ParkingLotManager{
         this.ticketFactory = ticketFactory;
         this.paymentStategy = paymentStategy;
     }
-
 
     public Optional<Ticket> enterParkingSpot(Vehicle vehicle) {
         Optional<ParkingSpot> parkingSpot = this.parkingLot.findAvailableSpot(vehicle);

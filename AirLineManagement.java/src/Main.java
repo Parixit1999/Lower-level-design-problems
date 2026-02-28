@@ -10,8 +10,6 @@
 //The system should handle passenger information.
 //The system should support different types of users, such as passengers, airline staff, and administrators.
 
-import lombok.Getter;
-
 public class Main {
 public static void main(String[] args) {
 
@@ -37,7 +35,6 @@ public static void main(String[] args) {
         Seat seat = new Seat(String.valueOf(i), flight3, SeatType.ECONOMY);
         flight3.addSeat(seat);
     }
-
 
     FlightManager airCraftManagement = new FlightManager();
 

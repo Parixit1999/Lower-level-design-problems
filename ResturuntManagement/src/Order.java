@@ -1,8 +1,5 @@
 import java.util.*;
-import java.util.stream.*;
 import java.util.concurrent.*;
-/**
- * The food delivery service should allow customers to browse restaurants, view menus, and place orders.
 
 class Order{
     String id;
@@ -12,7 +9,6 @@ class Order{
     Client client;
     ConcurrentHashMap<FoodItem, Integer> foodItems;
     List<OrderObserver> observers = new ArrayList<>();
-
 
     // I could have state pattern for the order, defining behavior based on the state of the order;
 

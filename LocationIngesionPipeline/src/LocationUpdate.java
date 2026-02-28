@@ -1,7 +1,3 @@
-
-import java.util.*;
-import java.util.concurrent.*;
-
 class LocationUpdate extends Message{
     Driver driver;
     Location location;

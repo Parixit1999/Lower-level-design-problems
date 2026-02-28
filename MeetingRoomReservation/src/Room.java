@@ -1,6 +1,6 @@
-import lombok.Getter;
+import java.util.*;
+import java.util.concurrent.*;
 
-@Getter
 class Room {
 
     private String roomName;
@@ -14,6 +14,14 @@ class Room {
         this.scheduledMeetings = new PriorityBlockingQueue<>();
         this.logs = new LinkedList<>();
         scheduledExecutorService.scheduleAtFixedRate(this::removeLog, logRetentionDay, logRetentionDay, TimeUnit.DAYS );
+    }
+
+    public String getRoomName() {
+        return roomName;
+    }
+
+    public long getRoomCapacity() {
+        return roomCapacity;
     }
 
     public synchronized boolean isOverLap(long startTime, long endTime) {
@@ -30,7 +38,7 @@ class Room {
     }
 
     public synchronized void scheduleMeeting(BookingRequest request) {
-        logs.add("Meeting is scheduled at: " + new Date(System.currentTimeMillis()) + " startime: " + request.starTime + " endtime: " + request.endTime  + " capacity:" + request.capacity);
+        logs.add("Meeting is scheduled at: " + new Date(System.currentTimeMillis()) + " startime: " + request.getStarTime() + " endtime: " + request.getEndTime()  + " capacity:" + request.getCapacity());
         this.scheduledMeetings.add(request);
     }
 

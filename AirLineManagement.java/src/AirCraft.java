@@ -10,16 +10,18 @@
 //The system should handle passenger information.
 //The system should support different types of users, such as passengers, airline staff, and administrators.
 
-import lombok.Getter;
-
 class AirCraft {
     private String id;
     private AirCraftType airCraftType;
     private int seatSize;
 
-    private AirCraft(String id, AirCraftType airCraftType, int seatSize){
+    protected AirCraft(String id, AirCraftType airCraftType, int seatSize){
         this.airCraftType = airCraftType;
         this.id = id;
         this.seatSize = seatSize;
+    }
+
+    public int getSeatSize() {
+        return seatSize;
     }
 }

@@ -1,10 +1,9 @@
-import lombok.Getter;
-import lombok.Setter;
+import java.util.*;
+import java.util.concurrent.locks.*;
 
 class LeaderBoard {
 
     private List<User> topUser;
-    @Getter
     private String gameName;
     private ReentrantReadWriteLock lock;
 

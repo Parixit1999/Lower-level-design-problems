@@ -1,5 +1,4 @@
-import lombok.Getter;
-import lombok.Setter;
+import java.util.*;
 
 class User implements Comparable<User>{
 
@@ -17,6 +16,10 @@ class User implements Comparable<User>{
             points += p.getScore();
         }
         return points;
+    }
+
+    public String getId() {
+        return id;
     }
 
     @Override

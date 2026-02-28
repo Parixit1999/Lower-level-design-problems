@@ -1,3 +1,6 @@
+import java.util.*;
+import java.util.concurrent.locks.*;
+
 class LRUCache<K, V> implements Cache<K, V> {
     private LinkedHashMap<K, V> lruCache = new LinkedHashMap<>();
     private ReentrantReadWriteLock lock = new ReentrantReadWriteLock();

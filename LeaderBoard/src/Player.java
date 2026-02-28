@@ -1,8 +1,6 @@
-import lombok.Getter;
-import lombok.Setter;
+import java.util.concurrent.atomic.*;
 
 class Player {
-    @Getter
     private String id;
 
     private AtomicLong score = new AtomicLong(0);

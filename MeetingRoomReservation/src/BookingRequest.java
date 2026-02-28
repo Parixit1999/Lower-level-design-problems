@@ -1,6 +1,3 @@
-import lombok.Getter;
-
-@Getter
 class BookingRequest implements Comparable {
 
     private long starTime;
@@ -13,6 +10,17 @@ class BookingRequest implements Comparable {
         this.capacity = capacity;
     }
 
+    public long getStarTime() {
+        return starTime;
+    }
+
+    public long getEndTime() {
+        return endTime;
+    }
+
+    public long getCapacity() {
+        return capacity;
+    }
 
     @Override
     public int compareTo(Object o) {

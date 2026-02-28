@@ -1,3 +1,5 @@
+import java.util.*;
+
 interface Cache<K, V> {
     void put(K key, V value);
     Optional<V> get(K key);

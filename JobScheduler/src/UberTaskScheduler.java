@@ -1,10 +1,10 @@
-import lombok.Getter;
+import java.util.concurrent.*;
+import java.util.concurrent.atomic.*;
 
 public class UberTaskScheduler {
   private final PriorityBlockingQueue<Job> jobQueue = new PriorityBlockingQueue<>();
   private final ExecutorService executorPool;
   private final AtomicBoolean isRunning = new AtomicBoolean(false);
-
 
   public UberTaskScheduler(int threadCount) {
     // Using a pool is cleaner than managing a Thread[] array

@@ -1,8 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
-import java.util.UUID;
-
 class RegularSpot extends ParkingSpot {
     public RegularSpot(String id){
         super(id, SpotType.REGULAR);

@@ -1,5 +1,3 @@
-import lombok.Getter;
-
 public enum Priority {
   LOW(1),
   MEDIUM(2),

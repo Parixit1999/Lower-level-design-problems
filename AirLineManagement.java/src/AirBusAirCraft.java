@@ -10,8 +10,6 @@
 //The system should handle passenger information.
 //The system should support different types of users, such as passengers, airline staff, and administrators.
 
-import lombok.Getter;
-
 class AirBusAirCraft extends AirCraft{
     public AirBusAirCraft(String id, int seatSize) {
         super(id, AirCraftType.AIRBUS, seatSize);

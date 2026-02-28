@@ -1,5 +1,3 @@
-
-import java.util.*;
 import java.util.concurrent.*;
 
 class RideScheduler implements Scheduler{

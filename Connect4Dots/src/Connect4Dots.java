@@ -1,6 +1,3 @@
-import javax.swing.text.html.Option;
-import java.util.*;
-
 public class Connect4Dots {
 
     void main() throws Exception {

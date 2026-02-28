@@ -1,7 +1,3 @@
-
-import java.util.*;
-import java.util.concurrent.*;
-
 class VehiclePaymentStategy implements PaymentStategy{
 
     static public int CAR_CHARGE = 10;

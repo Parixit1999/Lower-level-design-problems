@@ -1,6 +1,3 @@
-import javax.swing.text.html.Option;
-import java.util.*;
-
 class BoardRule {
 
     public boolean isDraw(Connect4DotsBoard board) {

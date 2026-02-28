@@ -1,9 +1,3 @@
-import java.util.*;
-import java.util.stream.*;
-import java.util.concurrent.*;
-/**
- * The food delivery service should allow customers to browse restaurants, view menus, and place orders.
-
 class DeliveryAgent implements OrderObserver {
     String id;
     String name;
@@ -16,7 +10,6 @@ class DeliveryAgent implements OrderObserver {
         cord = null;
         this.status = DeliveryAgentStatus.ACTIVE;
     }
-
 
     public synchronized void updateCoordinate(Coordinate updatedCord) {
         this.cord = updatedCord;

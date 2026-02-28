@@ -1,5 +1,3 @@
-import java.util.*;
-
 class PremiumSeat extends Seat {
 
     public PremiumSeat() {

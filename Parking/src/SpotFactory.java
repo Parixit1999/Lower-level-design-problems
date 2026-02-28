@@ -1,8 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
-import java.util.UUID;
-
 class SpotFactory {
     public static ParkingSpot createSpot(String id, SpotType type) throws IllegalAccessException {
         switch (type){

@@ -1,11 +1,9 @@
-
 import java.util.*;
 import java.util.concurrent.*;
 
 class ParkingLot{
 
     private CopyOnWriteArrayList<ParkingSpot> parkingSpots;
-
 
     public ParkingLot(CopyOnWriteArrayList<ParkingSpot> parkingSpots) {
         this.parkingSpots = parkingSpots;

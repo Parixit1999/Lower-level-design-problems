@@ -1,5 +1,4 @@
-import java.util.LinkedList;
-import java.util.Optional;
+import java.util.*;
 
 public class Rack {
     private final String id;

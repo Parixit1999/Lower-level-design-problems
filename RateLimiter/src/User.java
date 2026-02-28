@@ -1,6 +1,4 @@
-import lombok.Getter;
-
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.*;
 
 class User implements Identity {
     private String name;

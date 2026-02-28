@@ -1,7 +1,3 @@
-
-import java.util.*;
-import java.util.concurrent.*;
-
 enum VehicleType{
     MOTORCYCLE(5),
     CAR(10),

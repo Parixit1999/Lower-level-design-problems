@@ -1,3 +1,5 @@
+import java.util.concurrent.*;
+
 class HitCounterForWeb implements HitCountable {
 
     private ConcurrentHashMap<Integer, Integer> hashMap;

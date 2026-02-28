@@ -1,8 +1,5 @@
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Deque;
-import java.util.List;
-import java.util.concurrent.locks.ReentrantReadWriteLock;
+import java.util.*;
+import java.util.concurrent.locks.*;
 
 public class TerminalManager {
 
@@ -30,7 +27,6 @@ public class TerminalManager {
             Deque<Entry> nodesToExplore = new ArrayDeque<>();
             nodesToExplore.add(currentNode);
             boolean isAdded = false;
-
 
             for(int i = startIdx; i < components.length; i++) {
                 if(components[i].equals("*")) {
@@ -121,7 +117,6 @@ public class TerminalManager {
                             nodesToExplore.add(node.getChildren().get(component));
                         }
                     }
-
 
                     if(nodesToExplore.isEmpty()){
                         System.out.println("Path not found.");

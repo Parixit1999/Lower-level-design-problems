@@ -1,7 +1,3 @@
-import java.util.*;
-import java.util.concurrent.*;
-import java.util.stream.*;
-
 public class Main {
 public static void main(String[] args) {
     OperatonFactory operatonFactory = new OperatonFactory();
@@ -21,7 +17,6 @@ public static void main(String[] args) {
     textEditor.redo();
     System.out.println(textEditor.readLine(0));
 
-
     System.out.println(textEditor.readLine(1));
     textEditor.addText(1, 5, "-wide web");
     //world-wide web
@@ -31,7 +26,6 @@ public static void main(String[] args) {
 
     // world-wird web
     System.out.print(textEditor.readLine(1));
-
 
 }
 }

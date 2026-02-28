@@ -10,8 +10,6 @@
 //The system should handle passenger information.
 //The system should support different types of users, such as passengers, airline staff, and administrators.
 
-import lombok.Getter;
-
 class Seat {
     private String id;
     private Flight flight;
@@ -30,5 +28,17 @@ class Seat {
 
         this.isBooked = true;
         return this.isBooked;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public Flight getFlight() {
+        return flight;
+    }
+
+    public boolean isBooked() {
+        return isBooked;
     }
 }

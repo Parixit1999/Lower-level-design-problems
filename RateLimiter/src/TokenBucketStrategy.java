@@ -1,18 +1,19 @@
-import lombok.Getter;
-
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.*;
 
 class TokenBucketStrategy implements RateLimiterStrategy {
 
     private AtomicInteger bucketSize = new AtomicInteger();
     private final int bucketLimit;
-    @Getter
     private final int rate;
 
     public TokenBucketStrategy(int rate) {
         this.bucketLimit = rate;
         this.rate = rate;
         this.bucketSize.set(rate);
+    }
+
+    public int getRate() {
+        return rate;
     }
 
     public void refill() {

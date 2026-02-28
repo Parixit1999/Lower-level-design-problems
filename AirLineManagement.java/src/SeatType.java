@@ -10,8 +10,6 @@
 //The system should handle passenger information.
 //The system should support different types of users, such as passengers, airline staff, and administrators.
 
-import lombok.Getter;
-
 enum SeatType{
     BUSINESS,
     ECONOMY

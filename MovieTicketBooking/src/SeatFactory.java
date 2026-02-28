@@ -1,5 +1,3 @@
-import java.util.*;
-
 class SeatFactory {
 
     public Seat createSeat(SeatType seatType){

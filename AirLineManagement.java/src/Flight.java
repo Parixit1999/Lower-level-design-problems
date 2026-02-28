@@ -1,3 +1,5 @@
+import java.util.*;
+
 //The airline management system should allow users to search for flights based on source, destination, and date.
 //Users should be able to book flights, select seats, and make payments.
 //The system should manage flight schedules, aircraft assignments, and crew assignments.
@@ -9,8 +11,6 @@
 //The system should manage flight schedules, aircraft assignments, and crew assignments.
 //The system should handle passenger information.
 //The system should support different types of users, such as passengers, airline staff, and administrators.
-
-import lombok.Getter;
 
 class Flight {
 
@@ -38,6 +38,22 @@ class Flight {
 
     public void addSeat(Seat seat) {
         this.seats.add(seat);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSource() {
+        return source;
+    }
+
+    public String getDestination() {
+        return destination;
+    }
+
+    public long getDate() {
+        return date;
     }
 
     public List<Seat> getSeats() {

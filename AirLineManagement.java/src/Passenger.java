@@ -10,8 +10,6 @@
 //The system should handle passenger information.
 //The system should support different types of users, such as passengers, airline staff, and administrators.
 
-import lombok.Getter;
-
 class Passenger {
     private String id;
     private String name;
@@ -26,5 +24,9 @@ class Passenger {
 
     public void assignSeat(Seat seat) {
         this.seat = seat;
+    }
+
+    public String getName() {
+        return name;
     }
 }

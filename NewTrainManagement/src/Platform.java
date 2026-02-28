@@ -1,5 +1,3 @@
-import java.awt.print.Book;
-
 class Platform implements Comparable<Platform>{
     String id;
 

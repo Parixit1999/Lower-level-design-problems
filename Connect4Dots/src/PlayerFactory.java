@@ -1,6 +1,3 @@
-import javax.swing.text.html.Option;
-import java.util.*;
-
 class PlayerFactory {
     public Player createPlayer(PlayerType playerType, String name) throws Exception {
         switch (playerType) {

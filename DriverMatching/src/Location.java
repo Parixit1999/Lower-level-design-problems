@@ -1,7 +1,3 @@
-
-import java.util.*;
-import java.util.concurrent.*;
-
 class Location implements Comparable<Location>{
 
     long lat;

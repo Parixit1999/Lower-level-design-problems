@@ -1,7 +1,3 @@
-import lombok.Getter;
-import lombok.SneakyThrows;
-
-@Getter
 class Task implements Comparable<Task> {
 
     private String name;
@@ -12,6 +8,18 @@ class Task implements Comparable<Task> {
         this.name = name;
         this.startTime = startTime;
         this.interval = interval;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public long getStartTime() {
+        return startTime;
+    }
+
+    public long getInterval() {
+        return interval;
     }
 
     @Override

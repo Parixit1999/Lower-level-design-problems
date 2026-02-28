@@ -1,12 +1,9 @@
-import lombok.Getter;
-
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.*;
 
 class TimeWindowStrategy implements RateLimiterStrategy {
 
     private ConcurrentLinkedDeque<Long> queue;
     // Rate per second
-    @Getter
     private final int rate;
 
     public TimeWindowStrategy(int rate) {

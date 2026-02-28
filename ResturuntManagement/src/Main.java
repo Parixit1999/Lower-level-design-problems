@@ -1,8 +1,4 @@
 import java.util.*;
-import java.util.stream.*;
-import java.util.concurrent.*;
-/**
- * The food delivery service should allow customers to browse restaurants, view menus, and place orders.
 
 public class Main {
 public static void main(String[] args) {
@@ -20,7 +16,6 @@ public static void main(String[] args) {
     DeliveryAgent agent2 = new DeliveryAgent("Shamu", "2");
 
     FoodDeliveryManager manager = new FoodDeliveryManager();
-
 
     Restaurant restaurant1 = new Restaurant(menu, coordinate);
 

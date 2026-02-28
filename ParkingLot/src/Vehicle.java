@@ -1,7 +1,3 @@
-
-import java.util.*;
-import java.util.concurrent.*;
-
 class Vehicle{
     String id;
     VehicleType vehicleType;

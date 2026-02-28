@@ -1,7 +1,3 @@
-
-import java.util.*;
-import java.util.concurrent.*;
-
 enum ParkingSpotType{
     COMPACT(5),
     REGULAR(10),

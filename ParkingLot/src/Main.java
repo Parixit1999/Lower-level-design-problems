@@ -1,4 +1,3 @@
-
 import java.util.*;
 import java.util.concurrent.*;
 
@@ -27,8 +26,6 @@ public class Main {
         System.out.println(ticket1.get().getTotalChargable(System.currentTimeMillis()));
         parkingLotManager.exitParktingLot(ticket1.get(), 9L);
     }
-
-
 
 }
 }

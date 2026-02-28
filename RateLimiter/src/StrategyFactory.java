@@ -1,6 +1,4 @@
-import lombok.Getter;
-
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.*;
 
 public class StrategyFactory {
 

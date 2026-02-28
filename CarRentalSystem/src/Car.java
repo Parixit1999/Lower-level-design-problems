@@ -12,7 +12,6 @@ class Car {
         this.costPerKm = costPerKm;
     }
 
-
     // TODO: Getters.
 
 }

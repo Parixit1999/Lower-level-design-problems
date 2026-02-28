@@ -1,12 +1,9 @@
-import com.sun.source.tree.Tree;
-import lombok.Getter;
-
 class Train implements Comparable<Train>{
 
-  private String id;
-  private int startTime;
-  private int endTime;
-  private Platform assignedPlatform;
+  String id;
+  int startTime;
+  int endTime;
+  Platform assignedPlatform;
 
   public Train(String id, int startTime, int endTime) {
     this.id = id;
@@ -17,6 +14,22 @@ class Train implements Comparable<Train>{
 
   public synchronized void setAssignedPlatform(Platform platform) {
     this.assignedPlatform = platform;
+  }
+
+  public String getId() {
+    return id;
+  }
+
+  public int getStartTime() {
+    return startTime;
+  }
+
+  public int getEndTime() {
+    return endTime;
+  }
+
+  public Platform getAssignedPlatform() {
+    return assignedPlatform;
   }
 
   @Override

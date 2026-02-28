@@ -1,5 +1,3 @@
-import lombok.Getter;
-
 public class Job implements Comparable<Job> {
   private String name;
   private Priority priority;
@@ -9,6 +7,18 @@ public class Job implements Comparable<Job> {
     this.name = name;
     this.priority = priority;
     this.processTime = processTime;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public Priority getPriority() {
+    return priority;
+  }
+
+  public int getProcessTime() {
+    return processTime;
   }
 
   @Override
