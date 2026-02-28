@@ -1,6 +1,8 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
+
+public class Main {
+public static void main(String[] args) {
     MovieTicketBookingSystem movieTicketBookingSystem = MovieTicketBookingSystem.getInstance();
 
     Cinema cinema = movieTicketBookingSystem.getCinemas(CinemaCompany.INOX);
@@ -16,4 +18,5 @@ void main() {
 
     movieTicketBookingSystem.bookTicket(movieTicketBookingSystem.getTickets(ticketIterator.next()).getFirst());
     movieTicketBookingSystem.bookTicket(movieTicketBookingSystem.getTickets(ticketIterator.next()).getFirst());
+}
 }

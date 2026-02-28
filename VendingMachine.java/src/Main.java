@@ -1,4 +1,5 @@
-void main() {
+public class Main {
+public static void main(String[] args) {
         // 1. Setup Infrastructure
         RackFactory rackFactory = new RackFactory();
         PaymentStrategy cashStrategy = new CashPaymentStrategy();
@@ -45,4 +46,5 @@ void main() {
             System.out.println("Transaction Complete!");
             System.out.println("Remaining items in Rack 1: " + firstRack.getProductList().size());
         }
+}
 }

@@ -1,37 +1,5 @@
-
-interface HitCountable {
-    void incrementHitCount(int pageIdx);
-    int getVisitCount(int pageIdx);
-}
-
-class HitCounterForWeb implements HitCountable {
-
-    private ConcurrentHashMap<Integer, Integer> hashMap;
-    private int numberOfPages;
-    private final int POOL_SIZE = 1024;
-
-    public HitCounterForWeb(int numberOfPages) {
-        this.hashMap = new ConcurrentHashMap<>();
-        this.numberOfPages = numberOfPages;
-    }
-
-    @Override
-    public void incrementHitCount(int pageIdx) {
-
-        if(pageIdx < 0 || pageIdx >= this.numberOfPages) {
-            throw new RuntimeException("Invalid page index");
-        }
-
-        hashMap.merge(pageIdx, 1, Integer::sum);
-    }
-
-    @Override
-    public int getVisitCount(int pageIdx) {
-        return hashMap.getOrDefault(pageIdx, 0);
-    }
-}
-
-void main() throws InterruptedException {
+public class Main {
+public static void main(String[] args) throws InterruptedException {
     int highPageIdx = 200;
     int numberOfPages = 201;
     HitCounterForWeb counter = new HitCounterForWeb(numberOfPages);
@@ -66,4 +34,5 @@ void main() throws InterruptedException {
         System.out.println("\nSUCCESS: No hits lost (unlikely with high page index).");
     }
 
+}
 }

@@ -1,4 +1,5 @@
-void main() throws IllegalAccessException {
+public class Main {
+public static void main(String[] args) throws IllegalAccessException {
     NotificationService notifier = new NotificationService();
     notifier.addObserver(new SmsNotificationService());
 //    notifier.addObserver(new WhatsappNoficationService());
@@ -19,4 +20,5 @@ void main() throws IllegalAccessException {
     if (ticket != null) {
         lot.exit(ticket, new HourlyPricingStrategy(), PaymentType.CARD, "4444-5555-6666-7777");
     }
+}
 }

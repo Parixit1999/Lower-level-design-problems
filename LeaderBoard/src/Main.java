@@ -1,103 +1,8 @@
 import lombok.Getter;
 import lombok.Setter;
 
-
-class Player {
-    @Getter
-    private String id;
-
-    private AtomicLong score = new AtomicLong(0);
-
-    public Player(String id) {
-        this.id = id;
-        this.score.set(0);
-    }
-
-    public void setScore(long score) {
-        this.score.getAndAdd(score);
-    }
-
-    public long getScore() {
-        return this.score.get();
-    }
-}
-
-@Getter
-class User implements Comparable<User>{
-
-    private String id;
-    private List<Player> players;
-
-    public User(String id, List<Player> players) {
-        this.id = id;
-        this.players = players;
-    }
-
-    public long getLatestPoint() {
-        long points = 0;
-        for(Player p: players) {
-            points += p.getScore();
-        }
-        return points;
-    }
-
-    @Override
-    public int compareTo(User o) {
-        int result =  Long.compare(o.getLatestPoint(), this.getLatestPoint());
-
-        if(result == 0) {
-            return this.id.compareTo(o.getId());
-        }
-
-        return result;
-    }
-}
-
-
-class LeaderBoard {
-
-    private List<User> topUser;
-    @Getter
-    private String gameName;
-    private ReentrantReadWriteLock lock;
-
-    public LeaderBoard(String gameName) {
-        this.gameName = gameName;
-        this.topUser = new ArrayList<>();
-        this.lock = new ReentrantReadWriteLock();
-    }
-
-    public synchronized void addUser(User user) {
-        this.topUser.add(user);
-    }
-
-    public void addScore(Player player, long score) {
-        player.setScore(score);
-    }
-
-    public List<String> getTopK(int k) {
-
-        this.lock.readLock().lock();
-
-        try{
-            Collections.sort(topUser);
-            List<String> topKId = new LinkedList<>();
-
-            for(int i = 0; i < Math.min(k, this.topUser.size()); i++) {
-                User topUser = this.topUser.get(i);
-                topKId.add(topUser.getId());
-            }
-
-            return topKId;
-        } finally {
-            this.lock.readLock().unlock();
-        }
-
-    }
-
-}
-
-void main() throws InterruptedException {
+public class Main {
+public static void main(String[] args) throws InterruptedException {
     LeaderBoard lb = new LeaderBoard("World Cup");
 
     // 1. Initialize Players
@@ -154,4 +59,5 @@ void main() throws InterruptedException {
     // Verification Logic:
     // User 1 and 2 are tied at 200. Tie-breaker is ID "User_1" vs "User_2".
     // "User_1" comes first alphabetically.
+}
 }
